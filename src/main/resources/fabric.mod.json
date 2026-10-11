@@ -1,0 +1,32 @@
+{
+	"schemaVersion": 1,
+	"id": "champion-swords",
+	"version": "${version}",
+	"name": "Champion Swords",
+	"description": "Adds 16 new swords with custom abilities and recipes!",
+	"authors": [
+		"imperialIcarus"
+	],
+	"contact": {
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/champion-swords/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.icarus.championswords.ChampionSwords"
+		],
+		"fabric-datagen": [
+			"net.icarus.championswords.ChampionSwordsDataGenerator"
+		]
+	},
+	"mixins": [
+		"champion-swords.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.19.5",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}

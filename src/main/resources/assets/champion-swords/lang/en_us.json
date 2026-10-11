@@ -1,0 +1,12 @@
+{
+  "item.champion-swords.echoes_sword": "Sword of Echoes",
+  "item.champion-swords.echoes_handle": "Handle of Echoes",
+
+  "creativemodetab.champion-swords.champion_swords_items": "Champion Swords",
+
+  "tooltip.champion-swords.unshifted": "§eShift§7 for more information",
+
+  "tooltip.champion-swords.echoes_sword.one": "§eShift-Right Click§7 to shoot a sonically-charged shriek",
+  "tooltip.champion-swords.echoes_sword.two": "§7Cooldown 120 Seconds",
+  "tooltip.champion-swords.echoes_sword.three": "§7Durability Cost 50"
+}
