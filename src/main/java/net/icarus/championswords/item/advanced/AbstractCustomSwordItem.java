@@ -19,34 +19,33 @@ import org.jspecify.annotations.Nullable;
 import java.util.List;
 import java.util.function.Consumer;
 
+// Abstract Class for Swords, all other swords use this one's methods/fields
 public abstract class AbstractCustomSwordItem extends Item {
-    public static ToolMaterial TIER;
-    public static int USE_COOLDOWN;
-    public static int DURABILITY_COST;
-    public static Item ITEM_REFERENCE;
-    public static List<MobEffectInstance> STATUS_EFFECTS;
-    public static List<MobEffectInstance> APPLIED_EFFECTS;
-    public static List<Component> LORE;
 
-    public AbstractCustomSwordItem(Properties properties) {
+    public AbstractCustomSwordItem(Properties properties, ToolMaterial tier, int useCooldown) {
         Rarity rarity = Rarity.COMMON;
-        if (TIER.equals(ModToolMaterials.TIER_ONE_TOOL_MATERIAL)) {
+        if (tier.equals(ModToolMaterials.TIER_ONE_TOOL_MATERIAL)) {
             rarity = Rarity.UNCOMMON;
-        } else if (TIER.equals(ModToolMaterials.TIER_TWO_TOOL_MATERIAL)) {
+        } else if (tier.equals(ModToolMaterials.TIER_TWO_TOOL_MATERIAL)) {
             rarity = Rarity.RARE;
-        } else if (TIER.equals(ModToolMaterials.TIER_THREE_TOOL_MATERIAL)) {
+        } else if (tier.equals(ModToolMaterials.TIER_THREE_TOOL_MATERIAL)) {
             rarity = Rarity.EPIC;
         }
-        super(properties.sword(TIER, 3.0f, -2.4f).rarity(rarity).useCooldown(USE_COOLDOWN));
+        super(properties.sword(tier, 3.0f, -2.4f).rarity(rarity).useCooldown(useCooldown));
     }
 
-    abstract InteractionResult doRightClickAbility(Level level, Player player, InteractionHand hand);
-
+    // Abstract methods to supply information
+    public abstract InteractionResult doRightClickAbility(Level level, Player player, InteractionHand hand);
+    public abstract List<MobEffectInstance> getStatusEffects();
+    public abstract List<MobEffectInstance> getAppliedEffects();
+    public abstract Item getAsItem();
+    public abstract List<Component> getLore();
+    public abstract int getDurabilityCost();
     // Does the right click ability when shift clicked and consumes durability
     @Override
     public InteractionResult use(Level level, Player player, InteractionHand hand) {
         if (player.isCrouching() && hand.equals(InteractionHand.MAIN_HAND)) {
-            player.getItemInHand(hand).hurtAndBreak(DURABILITY_COST, player, hand);
+            player.getItemInHand(hand).hurtAndBreak(getDurabilityCost(), player, hand);
             return doRightClickAbility(level, player, hand);
         }
         else return InteractionResult.FAIL;
@@ -58,8 +57,8 @@ public abstract class AbstractCustomSwordItem extends Item {
         super.inventoryTick(itemStack, level, owner, slot);
         if (!level.isClientSide()) {
             if (owner instanceof Player player) {
-                if(player.getItemInHand(InteractionHand.MAIN_HAND).is(ITEM_REFERENCE) && !STATUS_EFFECTS.isEmpty()) {
-                    for (MobEffectInstance effect : STATUS_EFFECTS) {
+                if(player.getItemInHand(InteractionHand.MAIN_HAND).is(getAsItem()) && !getStatusEffects().isEmpty()) {
+                    for (MobEffectInstance effect : getStatusEffects()) {
                         player.addEffect(effect);
                     }
                 }
@@ -71,8 +70,8 @@ public abstract class AbstractCustomSwordItem extends Item {
     @Override
     public void hurtEnemy(ItemStack itemStack, LivingEntity mob, LivingEntity attacker) {
         super.hurtEnemy(itemStack, mob, attacker);
-        if (!APPLIED_EFFECTS.isEmpty()) {
-            for (MobEffectInstance effect : APPLIED_EFFECTS) {
+        if (!getAppliedEffects().isEmpty()) {
+            for (MobEffectInstance effect : getAppliedEffects()) {
                 mob.addEffect(effect);
             }
         }
@@ -83,10 +82,11 @@ public abstract class AbstractCustomSwordItem extends Item {
         if (!Minecraft.getInstance().hasShiftDown()) {
             builder.accept(Component.translatable("tooltip.champion-swords.unshifted"));
         } else {
-            for (Component line : LORE) {
+            for (Component line : getLore()) {
                 builder.accept(line);
             }
         }
         super.appendHoverText(itemStack, context, display, builder, tooltipFlag);
     }
+
 }

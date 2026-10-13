@@ -18,10 +18,8 @@ public class ModCreativeModeTabs {
     public static final CreativeModeTab CHAMPION_SWORDS_CREATIVE_MODE_TAB = register("champion_swords_items",
             Component.translatable("creativemodetab.champion-swords.champion_swords_items"),
             ModItems.ECHOES_SWORD,
-            List.of(
-                    ModItems.ECHOES_SWORD,
-                    ModItems.ECHOES_HANDLE
-            ));
+            ModItems.CHAMPION_SWORDS_ITEMS
+    );
     public static void registerModCreativeModeTabs() {
         ChampionSwords.LOGGER.info("Registering Mod Creative Mode Tabs for" + ChampionSwords.MOD_ID);
 

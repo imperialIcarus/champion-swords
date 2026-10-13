@@ -1,5 +1,19 @@
 {
   "values": [
-    "champion-swords:echoes_sword"
+    "champion-swords:echoes_sword",
+    "champion-swords:undying_sword",
+    "champion-swords:elder_sword",
+    "champion-swords:trials_sword",
+    "champion-swords:hero_sword",
+    "champion-swords:ashes_sword",
+    "champion-swords:blazing_sword",
+    "champion-swords:brute_sword",
+    "champion-swords:souls_sword",
+    "champion-swords:inferno_sword",
+    "champion-swords:eye_sword",
+    "champion-swords:crystals_sword",
+    "champion-swords:shulker_sword",
+    "champion-swords:dragon_sword",
+    "champion-swords:void_sword"
   ]
 }

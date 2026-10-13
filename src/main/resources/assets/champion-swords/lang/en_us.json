@@ -1,12 +1,54 @@
 {
-  "item.champion-swords.echoes_sword": "Sword of Echoes",
-  "item.champion-swords.echoes_handle": "Handle of Echoes",
-
   "creativemodetab.champion-swords.champion_swords_items": "Champion Swords",
 
   "tooltip.champion-swords.unshifted": "§eShift§7 for more information",
 
   "tooltip.champion-swords.echoes_sword.one": "§eShift-Right Click§7 to shoot a sonically-charged shriek",
   "tooltip.champion-swords.echoes_sword.two": "§7Cooldown 120 Seconds",
-  "tooltip.champion-swords.echoes_sword.three": "§7Durability Cost 50"
+  "tooltip.champion-swords.echoes_sword.three": "§7Durability Cost 50",
+
+  "item.champion-swords.echoes_handle": "Handle of Echoes",
+  "item.champion-swords.undying_handle": "Handle of Undying",
+  "item.champion-swords.elder_handle": "Handle of the Elder",
+  "item.champion-swords.trials_handle": "Handle of Trials",
+  "item.champion-swords.hero_handle": "Handle of the Hero",
+  "item.champion-swords.ashes_handle": "Handle of Ashes",
+  "item.champion-swords.blazing_handle": "Handle of Blazing",
+  "item.champion-swords.brute_handle": "Handle of the Brute",
+  "item.champion-swords.souls_handle": "Handle of Souls",
+  "item.champion-swords.inferno_handle": "Handle of the Inferno",
+  "item.champion-swords.eye_handle": "Handle of the Eye",
+  "item.champion-swords.crystals_handle": "Handle of Crystals",
+  "item.champion-swords.shulker_handle": "Handle of the Shulker",
+  "item.champion-swords.dragon_handle": "Handle of the Dragon",
+  "item.champion-swords.void_handle": "Handle of the Void",
+
+  "item.champion-swords.echoes_sword": "Sword of Echoes",
+  "item.champion-swords.undying_sword": "Sword of Undying",
+  "item.champion-swords.elder_sword": "Sword of the Elder",
+  "item.champion-swords.trials_sword": "Sword of Trials",
+  "item.champion-swords.hero_sword": "Sword of the Hero",
+  "item.champion-swords.ashes_sword": "Sword of Ashes",
+  "item.champion-swords.blazing_sword": "Sword of Blazing",
+  "item.champion-swords.brute_sword": "Sword of the Brute",
+  "item.champion-swords.souls_sword": "Sword of Souls",
+  "item.champion-swords.inferno_sword": "Sword of the Inferno",
+  "item.champion-swords.eye_sword": "Sword of the Eye",
+  "item.champion-swords.crystals_sword": "Sword of Crystals",
+  "item.champion-swords.shulker_sword": "Sword of the Shulker",
+  "item.champion-swords.dragon_sword": "Sword of the Dragon",
+  "item.champion-swords.void_sword": "Sword of the Void"
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

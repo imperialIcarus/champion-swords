@@ -7,6 +7,8 @@ import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
 import net.minecraft.client.data.models.model.ModelTemplate;
 import net.minecraft.client.data.models.model.ModelTemplates;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.level.ItemLike;
 
 public class ModModelProvider extends FabricModelProvider {
     public ModModelProvider(FabricPackOutput output) {
@@ -19,7 +21,11 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateItemModels(ItemModelGenerators itemModelGenerators) {
-        itemModelGenerators.generateFlatItem(ModItems.ECHOES_HANDLE, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ModItems.ECHOES_SWORD, ModelTemplates.FLAT_HANDHELD_ITEM);
+        for (ItemLike itemLike : ModItems.CHAMPION_SWORDS_HANDLES) {
+            itemModelGenerators.generateFlatItem((Item) itemLike, ModelTemplates.FLAT_ITEM);
+        }
+        for (ItemLike itemLike : ModItems.CHAMPION_SWORDS_SWORDS) {
+            itemModelGenerators.generateFlatItem((Item) itemLike, ModelTemplates.FLAT_HANDHELD_ITEM);
+        }
     }
 }
