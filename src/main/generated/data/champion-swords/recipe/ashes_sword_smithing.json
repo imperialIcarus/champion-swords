@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": "champion-swords:ashes_handle",
+  "base": "minecraft:diamond_sword",
+  "result": {
+    "id": "champion-swords:ashes_sword"
+  },
+  "template": "minecraft:netherite_upgrade_smithing_template"
+}

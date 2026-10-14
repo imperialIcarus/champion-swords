@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_champion_sword": {
+      "conditions": {
+        "items": [
+          {
+            "items": "champion-swords:champion_sword"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipes": "champion-swords:champion_handle"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_champion_sword"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "champion-swords:champion_handle"
+    ]
+  }
+}

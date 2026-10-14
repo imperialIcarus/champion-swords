@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    "champion-swords:void_handle",
+    "champion-swords:inferno_handle",
+    "champion-swords:hero_handle"
+  ],
+  "result": {
+    "id": "champion-swords:champion_handle"
+  }
+}

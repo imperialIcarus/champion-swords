@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipes": "champion-swords:trials_handle"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_trials_sword": {
+      "conditions": {
+        "items": [
+          {
+            "items": "champion-swords:trials_sword"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_trials_sword"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "champion-swords:trials_handle"
+    ]
+  }
+}

@@ -50,7 +50,8 @@ public class ModItems {
     public static final Item SHULKER_SWORD = registerItem("shulker_sword", ShulkerSwordItem::new);
     public static final Item DRAGON_SWORD = registerItem("dragon_sword", DragonSwordItem::new);
     public static final Item VOID_SWORD = registerItem("void_sword", VoidSwordItem::new);
-    public static final List<ItemLike> CHAMPION_SWORDS_SWORDS = List.of(ECHOES_SWORD, UNDYING_SWORD, ELDER_SWORD, TRIALS_SWORD, HERO_SWORD, ASHES_SWORD, BLAZING_SWORD, BRUTE_SWORD, SOULS_SWORD, INFERNO_SWORD, CRYSTALS_SWORD, EYE_SWORD, SHULKER_SWORD, DRAGON_SWORD, VOID_SWORD);
+    public static final Item CHAMPION_SWORD = registerItem("champion_sword", ChampionSwordItem::new);
+    public static final List<ItemLike> CHAMPION_SWORDS_SWORDS = List.of(ECHOES_SWORD, UNDYING_SWORD, ELDER_SWORD, TRIALS_SWORD, HERO_SWORD, ASHES_SWORD, BLAZING_SWORD, BRUTE_SWORD, SOULS_SWORD, INFERNO_SWORD, CRYSTALS_SWORD, EYE_SWORD, SHULKER_SWORD, DRAGON_SWORD, VOID_SWORD, CHAMPION_SWORD);
     // Handles
     public static final Item ECHOES_HANDLE = registerItem("echoes_handle", properties -> new Item(properties.stacksTo(1).rarity(Rarity.UNCOMMON)));
     public static final Item UNDYING_HANDLE = registerItem("undying_handle", properties -> new Item(properties.stacksTo(1).rarity(Rarity.UNCOMMON)));
@@ -67,9 +68,11 @@ public class ModItems {
     public static final Item SHULKER_HANDLE = registerItem("shulker_handle", properties -> new Item(properties.stacksTo(1).rarity(Rarity.UNCOMMON)));
     public static final Item DRAGON_HANDLE = registerItem("dragon_handle", properties -> new Item(properties.stacksTo(1).rarity(Rarity.UNCOMMON)));
     public static final Item VOID_HANDLE = registerItem("void_handle", properties -> new Item(properties.stacksTo(1).rarity(Rarity.RARE)));
-    public static final List<ItemLike> CHAMPION_SWORDS_HANDLES = List.of(ECHOES_HANDLE, UNDYING_HANDLE, ELDER_HANDLE, TRIALS_HANDLE, HERO_HANDLE, ASHES_HANDLE, BLAZING_HANDLE, BRUTE_HANDLE, SOULS_HANDLE, INFERNO_HANDLE, CRYSTALS_HANDLE, EYE_HANDLE, SHULKER_HANDLE, DRAGON_HANDLE, VOID_HANDLE);
+    public static final Item CHAMPION_HANDLE = registerItem("champion_handle", properties -> new Item(properties.stacksTo(1).rarity(Rarity.EPIC)));
 
-    public static final List<ItemLike> CHAMPION_SWORDS_ITEMS = List.of(ECHOES_HANDLE, UNDYING_HANDLE, ELDER_HANDLE, TRIALS_HANDLE, HERO_HANDLE, ASHES_HANDLE, BLAZING_HANDLE, BRUTE_HANDLE, SOULS_HANDLE, INFERNO_HANDLE, CRYSTALS_HANDLE, EYE_HANDLE, SHULKER_HANDLE, DRAGON_HANDLE, VOID_HANDLE, ECHOES_SWORD, UNDYING_SWORD, ELDER_SWORD, TRIALS_SWORD, HERO_SWORD, ASHES_SWORD, BLAZING_SWORD, BRUTE_SWORD, SOULS_SWORD, INFERNO_SWORD, CRYSTALS_SWORD, EYE_SWORD, SHULKER_SWORD, DRAGON_SWORD, VOID_SWORD);
+    public static final List<ItemLike> CHAMPION_SWORDS_HANDLES = List.of(ECHOES_HANDLE, UNDYING_HANDLE, ELDER_HANDLE, TRIALS_HANDLE, HERO_HANDLE, ASHES_HANDLE, BLAZING_HANDLE, BRUTE_HANDLE, SOULS_HANDLE, INFERNO_HANDLE, CRYSTALS_HANDLE, EYE_HANDLE, SHULKER_HANDLE, DRAGON_HANDLE, VOID_HANDLE, CHAMPION_HANDLE);
+
+    public static final List<ItemLike> CHAMPION_SWORDS_ITEMS = List.of(ECHOES_HANDLE, UNDYING_HANDLE, ELDER_HANDLE, TRIALS_HANDLE, HERO_HANDLE, ASHES_HANDLE, BLAZING_HANDLE, BRUTE_HANDLE, SOULS_HANDLE, INFERNO_HANDLE, CRYSTALS_HANDLE, EYE_HANDLE, SHULKER_HANDLE, DRAGON_HANDLE, VOID_HANDLE, CHAMPION_HANDLE,ECHOES_SWORD, UNDYING_SWORD, ELDER_SWORD, TRIALS_SWORD, HERO_SWORD, ASHES_SWORD, BLAZING_SWORD, BRUTE_SWORD, SOULS_SWORD, INFERNO_SWORD, CRYSTALS_SWORD, EYE_SWORD, SHULKER_SWORD, DRAGON_SWORD, VOID_SWORD, CHAMPION_SWORD);
 
     public static ResourceKey<Item> getRK(Item item) {
         return BuiltInRegistries.ITEM.getResourceKey(item).get();

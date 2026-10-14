@@ -1,0 +1,65 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_echoes_handle": {
+      "conditions": {
+        "items": [
+          {
+            "items": "champion-swords:echoes_handle"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_elder_handle": {
+      "conditions": {
+        "items": [
+          {
+            "items": "champion-swords:elder_handle"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipes": "champion-swords:hero_handle_from_merging"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_trials_handle": {
+      "conditions": {
+        "items": [
+          {
+            "items": "champion-swords:trials_handle"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_undying_handle": {
+      "conditions": {
+        "items": [
+          {
+            "items": "champion-swords:undying_handle"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_echoes_handle",
+      "has_elder_handle",
+      "has_trials_handle",
+      "has_undying_handle"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "champion-swords:hero_handle_from_merging"
+    ]
+  }
+}

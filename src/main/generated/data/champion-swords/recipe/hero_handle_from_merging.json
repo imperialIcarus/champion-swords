@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    "champion-swords:echoes_handle",
+    "champion-swords:elder_handle",
+    "champion-swords:trials_handle",
+    "champion-swords:undying_handle"
+  ],
+  "result": {
+    "id": "champion-swords:hero_handle"
+  }
+}

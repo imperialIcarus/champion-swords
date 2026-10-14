@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    "champion-swords:blazing_handle",
+    "champion-swords:brute_handle",
+    "champion-swords:ashes_handle",
+    "champion-swords:souls_handle"
+  ],
+  "result": {
+    "id": "champion-swords:inferno_handle"
+  }
+}

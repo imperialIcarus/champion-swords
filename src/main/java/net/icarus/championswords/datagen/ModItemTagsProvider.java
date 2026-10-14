@@ -34,7 +34,8 @@ public class ModItemTagsProvider extends FabricTagsProvider.ItemTagsProvider {
                 .add(ModItems.getRK(ModItems.CRYSTALS_SWORD))
                 .add(ModItems.getRK(ModItems.SHULKER_SWORD))
                 .add(ModItems.getRK(ModItems.DRAGON_SWORD))
-                .add(ModItems.getRK(ModItems.VOID_SWORD));
+                .add(ModItems.getRK(ModItems.VOID_SWORD))
+                .add(ModItems.getRK(ModItems.CHAMPION_SWORD));
     }
 
 }

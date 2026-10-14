@@ -22,6 +22,7 @@
   "item.champion-swords.shulker_handle": "Handle of the Shulker",
   "item.champion-swords.dragon_handle": "Handle of the Dragon",
   "item.champion-swords.void_handle": "Handle of the Void",
+  "item.champion-swords.champion_handle": "Handle of the Champion",
 
   "item.champion-swords.echoes_sword": "Sword of Echoes",
   "item.champion-swords.undying_sword": "Sword of Undying",
@@ -37,7 +38,8 @@
   "item.champion-swords.crystals_sword": "Sword of Crystals",
   "item.champion-swords.shulker_sword": "Sword of the Shulker",
   "item.champion-swords.dragon_sword": "Sword of the Dragon",
-  "item.champion-swords.void_sword": "Sword of the Void"
+  "item.champion-swords.void_sword": "Sword of the Void",
+  "item.champion-swords.champion_sword": "Sword of the Champion"
 
 
 

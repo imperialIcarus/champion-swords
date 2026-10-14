@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    "champion-swords:shulker_handle",
+    "champion-swords:eye_handle",
+    "champion-swords:dragon_handle",
+    "champion-swords:crystals_handle"
+  ],
+  "result": {
+    "id": "champion-swords:void_handle"
+  }
+}

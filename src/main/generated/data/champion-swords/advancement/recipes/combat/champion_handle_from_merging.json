@@ -1,0 +1,54 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_hero_handle": {
+      "conditions": {
+        "items": [
+          {
+            "items": "champion-swords:hero_handle"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_inferno_handle": {
+      "conditions": {
+        "items": [
+          {
+            "items": "champion-swords:inferno_handle"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipes": "champion-swords:champion_handle_from_merging"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_void_handle": {
+      "conditions": {
+        "items": [
+          {
+            "items": "champion-swords:void_handle"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_void_handle",
+      "has_inferno_handle",
+      "has_hero_handle"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "champion-swords:champion_handle_from_merging"
+    ]
+  }
+}

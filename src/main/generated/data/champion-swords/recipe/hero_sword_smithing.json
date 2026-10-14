@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": "champion-swords:hero_handle",
+  "base": "minecraft:diamond_sword",
+  "result": {
+    "id": "champion-swords:hero_sword"
+  },
+  "template": "minecraft:netherite_upgrade_smithing_template"
+}
