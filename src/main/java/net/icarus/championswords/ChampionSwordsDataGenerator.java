@@ -3,7 +3,6 @@ package net.icarus.championswords;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.icarus.championswords.datagen.*;
-import net.icarus.championswords.datagen.villager.ModTradeSets;
 import net.icarus.championswords.datagen.villager.ModVillagerTradeTags;
 import net.icarus.championswords.datagen.villager.ModVillagerTrades;
 import net.minecraft.core.RegistrySetBuilder;
@@ -28,7 +27,5 @@ public class ChampionSwordsDataGenerator implements DataGeneratorEntrypoint {
 	public void buildRegistry(RegistrySetBuilder registryBuilder) {
 
 		registryBuilder.add(Registries.VILLAGER_TRADE, ModVillagerTrades::bootstrap);
-		registryBuilder.add(Registries.TRADE_SET, ModTradeSets::bootstrap);
-
 	}
 }

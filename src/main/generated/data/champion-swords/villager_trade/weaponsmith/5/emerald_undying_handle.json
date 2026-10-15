@@ -1,0 +1,16 @@
+{
+  "additional_wants": {
+    "count": 64,
+    "id": "minecraft:emerald"
+  },
+  "gives": {
+    "id": "champion-swords:undying_handle"
+  },
+  "max_uses": 1,
+  "reputation_discount": 0.05,
+  "wants": {
+    "count": 64,
+    "id": "minecraft:emerald"
+  },
+  "xp": 100
+}

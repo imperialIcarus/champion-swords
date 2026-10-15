@@ -5,5 +5,5 @@
   "result": {
     "id": "champion-swords:trials_sword"
   },
-  "template": "minecraft:netherite_upgrade_smithing_template"
+  "template": "minecraft:diamond"
 }

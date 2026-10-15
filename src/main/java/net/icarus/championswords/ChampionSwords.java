@@ -19,7 +19,6 @@ public class ChampionSwords implements ModInitializer {
 	public void onInitialize() {
 		ModCreativeModeTabs.registerModCreativeModeTabs();
 		ModItems.registerModItems();
-
 		LootTableEvents.MODIFY.register(ModLootTableModifiers::modifyLootTables);
 
 	}

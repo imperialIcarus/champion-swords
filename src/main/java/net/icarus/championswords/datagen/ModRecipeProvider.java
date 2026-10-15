@@ -57,13 +57,13 @@ public class ModRecipeProvider extends FabricRecipeProvider { // Provides the re
                         .save(output));
 
                 CHAMPION_SWORDS_HANDLE_TO_SWORD_MAP.forEach((sword, handle) ->
-                        SmithingTransformRecipeBuilder.smithing(Ingredient.of(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
+                        SmithingTransformRecipeBuilder.smithing(Ingredient.of(Items.DIAMOND),
                         Ingredient.of(Items.DIAMOND_SWORD),
                         Ingredient.of(handle),
                         RecipeCategory.COMBAT,
                         sword)
                                 .unlocks(getHasName(Items.DIAMOND_SWORD), has(Items.DIAMOND_SWORD))
-                                .unlocks(getHasName(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE), has(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE))
+                                .unlocks(getHasName(Items.DIAMOND), has(Items.DIAMOND))
                                 .unlocks(getHasName(handle), has(handle))
                                 .save(output, getItemName(sword) + "_smithing")
                 );
@@ -110,7 +110,18 @@ public class ModRecipeProvider extends FabricRecipeProvider { // Provides the re
                         .unlockedBy(getHasName(ModItems.INFERNO_HANDLE), has(ModItems.INFERNO_HANDLE))
                         .unlockedBy(getHasName(ModItems.HERO_HANDLE), has(ModItems.HERO_HANDLE))
                         .save(output, "champion_handle_from_merging");
-                
+
+                // Crystals Handle Recipe
+                shaped(RecipeCategory.COMBAT, ModItems.CRYSTALS_HANDLE)
+                        .pattern("ccc")
+                        .pattern("cec")
+                        .pattern("ccc")
+                        .define('c', Items.END_CRYSTAL)
+                        .define('e', Items.END_ROD)
+                        .unlockedBy(getHasName(Items.END_CRYSTAL), has(Items.END_CRYSTAL))
+                        .unlockedBy(getHasName(Items.END_ROD), has(Items.END_ROD))
+                        .save(output, "crystals_handle_from_ingredients");
+
             }
             };
         }

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "c": "minecraft:end_crystal",
+    "e": "minecraft:end_rod"
+  },
+  "pattern": [
+    "ccc",
+    "cec",
+    "ccc"
+  ],
+  "result": {
+    "id": "champion-swords:crystals_handle"
+  }
+}
