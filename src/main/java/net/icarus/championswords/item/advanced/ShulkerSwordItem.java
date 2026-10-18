@@ -6,6 +6,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.Level;
@@ -14,12 +15,14 @@ import java.util.List;
 
 public class ShulkerSwordItem extends AbstractCustomSwordItem {
     public ShulkerSwordItem(Properties properties) {
-        super(properties, ModToolMaterials.TIER_ONE_TOOL_MATERIAL, 0);
+        super(properties, ModToolMaterials.TIER_ONE_TOOL_MATERIAL, 60);
 
     }
 
     @Override
     public InteractionResult doRightClickAbility(Level level, Player player, InteractionHand hand) {
+        player.addEffect(new MobEffectInstance(MobEffects.RESISTANCE, 600, 4));
+        player.addEffect(new MobEffectInstance(MobEffects.SLOWNESS, 600, 4));
         return InteractionResult.SUCCESS;
     }
 
@@ -40,11 +43,15 @@ public class ShulkerSwordItem extends AbstractCustomSwordItem {
 
     @Override
     public List<Component> getLore() {
-        return List.of();
+        return List.of(
+                Component.translatable("tooltip.champion-swords.shulker_sword.one"),
+                Component.translatable("tooltip.champion-swords.shulker_sword.two"),
+                Component.translatable("tooltip.champion-swords.shulker_sword.three")
+        );
     }
 
     @Override
     public int getDurabilityCost() {
-        return 0;
+        return 25;
     }
 }

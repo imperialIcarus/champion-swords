@@ -6,6 +6,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.Level;
@@ -30,7 +31,10 @@ public class ElderSwordItem extends AbstractCustomSwordItem {
 
     @Override
     public List<MobEffectInstance> getAppliedEffects() {
-        return List.of();
+        return List.of(
+                new MobEffectInstance(MobEffects.MINING_FATIGUE, 100, 2),
+                new MobEffectInstance(MobEffects.SLOWNESS, 100, 2)
+        );
     }
 
     @Override
@@ -40,7 +44,9 @@ public class ElderSwordItem extends AbstractCustomSwordItem {
 
     @Override
     public List<Component> getLore() {
-        return List.of();
+        return List.of(
+                Component.translatable("tooltip.champion-swords.elder_sword")
+        );
     }
 
     @Override

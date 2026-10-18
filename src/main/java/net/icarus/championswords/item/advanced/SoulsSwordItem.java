@@ -6,6 +6,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.Level;
@@ -25,7 +26,9 @@ public class SoulsSwordItem extends AbstractCustomSwordItem {
 
     @Override
     public List<MobEffectInstance> getStatusEffects() {
-        return List.of();
+        return List.of(
+                new MobEffectInstance(MobEffects.HEALTH_BOOST, 5, 1)
+        );
     }
 
     @Override
@@ -35,12 +38,15 @@ public class SoulsSwordItem extends AbstractCustomSwordItem {
 
     @Override
     public Item getAsItem() {
-        return ModItems.SHULKER_SWORD;
+        return ModItems.SOULS_SWORD;
     }
 
     @Override
     public List<Component> getLore() {
-        return List.of();
+        return List.of(
+                Component.translatable("tooltip.champion-swords.souls_sword")
+
+        );
     }
 
     @Override

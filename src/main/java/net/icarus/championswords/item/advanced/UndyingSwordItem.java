@@ -6,6 +6,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.Level;
@@ -14,12 +15,14 @@ import java.util.List;
 
 public class UndyingSwordItem extends AbstractCustomSwordItem {
     public UndyingSwordItem(Properties properties) {
-        super(properties, ModToolMaterials.TIER_ONE_TOOL_MATERIAL, 0);
+        super(properties, ModToolMaterials.TIER_ONE_TOOL_MATERIAL, 60);
 
     }
 
     @Override
     public InteractionResult doRightClickAbility(Level level, Player player, InteractionHand hand) {
+        player.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 100, 4));
+        player.addEffect(new MobEffectInstance(MobEffects.ABSORPTION, 600, 2));
         return InteractionResult.SUCCESS;
     }
 
@@ -35,16 +38,21 @@ public class UndyingSwordItem extends AbstractCustomSwordItem {
 
     @Override
     public Item getAsItem() {
-        return ModItems.TRIALS_SWORD;
+        return ModItems.UNDYING_SWORD;
     }
 
     @Override
     public List<Component> getLore() {
-        return List.of();
+        return List.of(
+                Component.translatable("tooltip.champion-swords.undying_sword.one"),
+                Component.translatable("tooltip.champion-swords.undying_sword.two"),
+                Component.translatable("tooltip.champion-swords.undying_sword.three")
+
+        );
     }
 
     @Override
     public int getDurabilityCost() {
-        return 0;
+        return 10;
     }
 }

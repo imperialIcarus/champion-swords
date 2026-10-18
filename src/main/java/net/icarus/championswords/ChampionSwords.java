@@ -2,6 +2,7 @@ package net.icarus.championswords;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.fabricmc.fabric.api.loot.v3.LootTableEvents;
 import net.icarus.championswords.creativemodtab.ModCreativeModeTabs;
 import net.icarus.championswords.item.ModItems;
@@ -20,6 +21,7 @@ public class ChampionSwords implements ModInitializer {
 		ModCreativeModeTabs.registerModCreativeModeTabs();
 		ModItems.registerModItems();
 		LootTableEvents.MODIFY.register(ModLootTableModifiers::modifyLootTables);
+
 
 	}
 

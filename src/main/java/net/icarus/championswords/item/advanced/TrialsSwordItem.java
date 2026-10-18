@@ -14,12 +14,13 @@ import java.util.List;
 
 public class TrialsSwordItem extends AbstractCustomSwordItem {
     public TrialsSwordItem(Properties properties) {
-        super(properties, ModToolMaterials.TIER_ONE_TOOL_MATERIAL, 0);
+        super(properties, ModToolMaterials.TIER_ONE_TOOL_MATERIAL, 3);
 
     }
 
     @Override
     public InteractionResult doRightClickAbility(Level level, Player player, InteractionHand hand) {
+        player.push(player.getLookAngle().scale(4));
         return InteractionResult.SUCCESS;
     }
 
@@ -40,11 +41,15 @@ public class TrialsSwordItem extends AbstractCustomSwordItem {
 
     @Override
     public List<Component> getLore() {
-        return List.of();
+        return List.of(
+                Component.translatable("tooltip.champion-swords.trials_sword.one"),
+                Component.translatable("tooltip.champion-swords.trials_sword.two"),
+                Component.translatable("tooltip.champion-swords.trials_sword.three")
+        );
     }
 
     @Override
     public int getDurabilityCost() {
-        return 0;
+        return 2;
     }
 }
