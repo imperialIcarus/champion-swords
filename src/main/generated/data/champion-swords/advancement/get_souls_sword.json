@@ -1,0 +1,33 @@
+{
+  "parent": "champion-swords:get_diamond_sword",
+  "criteria": {
+    "got_souls_sword": {
+      "conditions": {
+        "items": [
+          {
+            "items": "champion-swords:souls_sword"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.champion-swords.get_souls_sword.description"
+    },
+    "frame": "goal",
+    "icon": {
+      "id": "champion-swords:souls_sword"
+    },
+    "title": {
+      "translate": "advancements.champion-swords.get_souls_sword.title"
+    }
+  },
+  "requirements": [
+    [
+      "got_souls_sword"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

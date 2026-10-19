@@ -53,22 +53,118 @@ public class ModItems {
     public static final Item CHAMPION_SWORD = registerItem("champion_sword", ChampionSwordItem::new);
     public static final List<ItemLike> CHAMPION_SWORDS_SWORDS = List.of(ECHOES_SWORD, UNDYING_SWORD, ELDER_SWORD, TRIALS_SWORD, HERO_SWORD, ASHES_SWORD, BLAZING_SWORD, BRUTE_SWORD, SOULS_SWORD, INFERNO_SWORD, CRYSTALS_SWORD, EYE_SWORD, SHULKER_SWORD, DRAGON_SWORD, VOID_SWORD, CHAMPION_SWORD);
     // Handles
-    public static final Item ECHOES_HANDLE = registerItem("echoes_handle", properties -> new Item(properties.stacksTo(1).rarity(Rarity.UNCOMMON)));
-    public static final Item UNDYING_HANDLE = registerItem("undying_handle", properties -> new Item(properties.stacksTo(1).rarity(Rarity.UNCOMMON)));
-    public static final Item ELDER_HANDLE = registerItem("elder_handle", properties -> new Item(properties.stacksTo(1).rarity(Rarity.UNCOMMON)));
-    public static final Item TRIALS_HANDLE = registerItem("trials_handle", properties -> new Item(properties.stacksTo(1).rarity(Rarity.UNCOMMON)));
-    public static final Item HERO_HANDLE = registerItem("hero_handle", properties -> new Item(properties.stacksTo(1).rarity(Rarity.RARE)));
-    public static final Item ASHES_HANDLE = registerItem("ashes_handle", properties -> new Item(properties.stacksTo(1).rarity(Rarity.UNCOMMON)));
-    public static final Item BLAZING_HANDLE = registerItem("blazing_handle", properties -> new Item(properties.stacksTo(1).rarity(Rarity.UNCOMMON)));
-    public static final Item BRUTE_HANDLE = registerItem("brute_handle", properties -> new Item(properties.stacksTo(1).rarity(Rarity.UNCOMMON)));
-    public static final Item SOULS_HANDLE = registerItem("souls_handle", properties -> new Item(properties.stacksTo(1).rarity(Rarity.UNCOMMON)));
-    public static final Item INFERNO_HANDLE = registerItem("inferno_handle", properties -> new Item(properties.stacksTo(1).rarity(Rarity.RARE)));
-    public static final Item CRYSTALS_HANDLE = registerItem("crystals_handle", properties -> new Item(properties.stacksTo(1).rarity(Rarity.UNCOMMON)));
-    public static final Item EYE_HANDLE = registerItem("eye_handle", properties -> new Item(properties.stacksTo(1).rarity(Rarity.UNCOMMON)));
-    public static final Item SHULKER_HANDLE = registerItem("shulker_handle", properties -> new Item(properties.stacksTo(1).rarity(Rarity.UNCOMMON)));
-    public static final Item DRAGON_HANDLE = registerItem("dragon_handle", properties -> new Item(properties.stacksTo(1).rarity(Rarity.UNCOMMON)));
-    public static final Item VOID_HANDLE = registerItem("void_handle", properties -> new Item(properties.stacksTo(1).rarity(Rarity.RARE)));
-    public static final Item CHAMPION_HANDLE = registerItem("champion_handle", properties -> new Item(properties.stacksTo(1).rarity(Rarity.EPIC)));
+    public static final Item ECHOES_HANDLE = registerItem("echoes_handle", properties -> new Item(properties.stacksTo(1).rarity(Rarity.UNCOMMON)) {
+        @Override
+        public void appendHoverText(ItemStack itemStack, TooltipContext context, TooltipDisplay display, Consumer<Component> builder, TooltipFlag tooltipFlag) {
+            builder.accept(Component.translatable("tooltip.champion-swords.echoes_handle"));
+            super.appendHoverText(itemStack, context, display, builder, tooltipFlag);
+        }
+    });
+    public static final Item UNDYING_HANDLE = registerItem("undying_handle", properties -> new Item(properties.stacksTo(1).rarity(Rarity.UNCOMMON)) {
+        @Override
+        public void appendHoverText(ItemStack itemStack, TooltipContext context, TooltipDisplay display, Consumer<Component> builder, TooltipFlag tooltipFlag) {
+            builder.accept(Component.translatable("tooltip.champion-swords.undying_handle"));
+            super.appendHoverText(itemStack, context, display, builder, tooltipFlag);
+        }
+    });
+    public static final Item ELDER_HANDLE = registerItem("elder_handle", properties -> new Item(properties.stacksTo(1).rarity(Rarity.UNCOMMON)) {
+        @Override
+        public void appendHoverText(ItemStack itemStack, TooltipContext context, TooltipDisplay display, Consumer<Component> builder, TooltipFlag tooltipFlag) {
+            builder.accept(Component.translatable("tooltip.champion-swords.elder_handle"));
+            super.appendHoverText(itemStack, context, display, builder, tooltipFlag);
+        }
+    });
+    public static final Item TRIALS_HANDLE = registerItem("trials_handle", properties -> new Item(properties.stacksTo(1).rarity(Rarity.UNCOMMON)) {
+        @Override
+        public void appendHoverText(ItemStack itemStack, TooltipContext context, TooltipDisplay display, Consumer<Component> builder, TooltipFlag tooltipFlag) {
+            builder.accept(Component.translatable("tooltip.champion-swords.trials_handle"));
+            super.appendHoverText(itemStack, context, display, builder, tooltipFlag);
+        }
+    });
+    public static final Item HERO_HANDLE = registerItem("hero_handle", properties -> new Item(properties.stacksTo(1).rarity(Rarity.RARE)) {
+        @Override
+        public void appendHoverText(ItemStack itemStack, TooltipContext context, TooltipDisplay display, Consumer<Component> builder, TooltipFlag tooltipFlag) {
+            builder.accept(Component.translatable("tooltip.champion-swords.hero_handle"));
+            super.appendHoverText(itemStack, context, display, builder, tooltipFlag);
+        }
+    });
+    public static final Item ASHES_HANDLE = registerItem("ashes_handle", properties -> new Item(properties.stacksTo(1).rarity(Rarity.UNCOMMON)) {
+        @Override
+        public void appendHoverText(ItemStack itemStack, TooltipContext context, TooltipDisplay display, Consumer<Component> builder, TooltipFlag tooltipFlag) {
+            builder.accept(Component.translatable("tooltip.champion-swords.ashes_handle"));
+            super.appendHoverText(itemStack, context, display, builder, tooltipFlag);
+        }
+    });
+    public static final Item BLAZING_HANDLE = registerItem("blazing_handle", properties -> new Item(properties.stacksTo(1).rarity(Rarity.UNCOMMON)) {
+        @Override
+        public void appendHoverText(ItemStack itemStack, TooltipContext context, TooltipDisplay display, Consumer<Component> builder, TooltipFlag tooltipFlag) {
+            builder.accept(Component.translatable("tooltip.champion-swords.blazing_handle"));
+            super.appendHoverText(itemStack, context, display, builder, tooltipFlag);
+        }
+    });
+    public static final Item BRUTE_HANDLE = registerItem("brute_handle", properties -> new Item(properties.stacksTo(1).rarity(Rarity.UNCOMMON)) {
+        @Override
+        public void appendHoverText(ItemStack itemStack, TooltipContext context, TooltipDisplay display, Consumer<Component> builder, TooltipFlag tooltipFlag) {
+            builder.accept(Component.translatable("tooltip.champion-swords.brute_handle"));
+            super.appendHoverText(itemStack, context, display, builder, tooltipFlag);
+        }
+    });
+    public static final Item SOULS_HANDLE = registerItem("souls_handle", properties -> new Item(properties.stacksTo(1).rarity(Rarity.UNCOMMON)) {
+        @Override
+        public void appendHoverText(ItemStack itemStack, TooltipContext context, TooltipDisplay display, Consumer<Component> builder, TooltipFlag tooltipFlag) {
+            builder.accept(Component.translatable("tooltip.champion-swords.souls_handle"));
+            super.appendHoverText(itemStack, context, display, builder, tooltipFlag);
+        }
+    });
+    public static final Item INFERNO_HANDLE = registerItem("inferno_handle", properties -> new Item(properties.stacksTo(1).rarity(Rarity.RARE)) {
+        @Override
+        public void appendHoverText(ItemStack itemStack, TooltipContext context, TooltipDisplay display, Consumer<Component> builder, TooltipFlag tooltipFlag) {
+            builder.accept(Component.translatable("tooltip.champion-swords.inferno_handle"));
+            super.appendHoverText(itemStack, context, display, builder, tooltipFlag);
+        }
+    });
+    public static final Item CRYSTALS_HANDLE = registerItem("crystals_handle", properties -> new Item(properties.stacksTo(1).rarity(Rarity.UNCOMMON)) {
+        @Override
+        public void appendHoverText(ItemStack itemStack, TooltipContext context, TooltipDisplay display, Consumer<Component> builder, TooltipFlag tooltipFlag) {
+            builder.accept(Component.translatable("tooltip.champion-swords.crystals_handle"));
+            super.appendHoverText(itemStack, context, display, builder, tooltipFlag);
+        }
+    });
+    public static final Item EYE_HANDLE = registerItem("eye_handle", properties -> new Item(properties.stacksTo(1).rarity(Rarity.UNCOMMON)) {
+        @Override
+        public void appendHoverText(ItemStack itemStack, TooltipContext context, TooltipDisplay display, Consumer<Component> builder, TooltipFlag tooltipFlag) {
+            builder.accept(Component.translatable("tooltip.champion-swords.eye_handle"));
+            super.appendHoverText(itemStack, context, display, builder, tooltipFlag);
+        }
+    });
+    public static final Item SHULKER_HANDLE = registerItem("shulker_handle", properties -> new Item(properties.stacksTo(1).rarity(Rarity.UNCOMMON)) {
+        @Override
+        public void appendHoverText(ItemStack itemStack, TooltipContext context, TooltipDisplay display, Consumer<Component> builder, TooltipFlag tooltipFlag) {
+            builder.accept(Component.translatable("tooltip.champion-swords.shulker_handle"));
+            super.appendHoverText(itemStack, context, display, builder, tooltipFlag);
+        }
+    });
+    public static final Item DRAGON_HANDLE = registerItem("dragon_handle", properties -> new Item(properties.stacksTo(1).rarity(Rarity.UNCOMMON)) {
+        @Override
+        public void appendHoverText(ItemStack itemStack, TooltipContext context, TooltipDisplay display, Consumer<Component> builder, TooltipFlag tooltipFlag) {
+            builder.accept(Component.translatable("tooltip.champion-swords.dragon_handle"));
+            super.appendHoverText(itemStack, context, display, builder, tooltipFlag);
+        }
+    });
+    public static final Item VOID_HANDLE = registerItem("void_handle", properties -> new Item(properties.stacksTo(1).rarity(Rarity.RARE)) {
+        @Override
+        public void appendHoverText(ItemStack itemStack, TooltipContext context, TooltipDisplay display, Consumer<Component> builder, TooltipFlag tooltipFlag) {
+            builder.accept(Component.translatable("tooltip.champion-swords.void_handle"));
+            super.appendHoverText(itemStack, context, display, builder, tooltipFlag);
+        }
+    });
+    public static final Item CHAMPION_HANDLE = registerItem("champion_handle", properties -> new Item(properties.stacksTo(1).rarity(Rarity.EPIC)) {
+        @Override
+        public void appendHoverText(ItemStack itemStack, TooltipContext context, TooltipDisplay display, Consumer<Component> builder, TooltipFlag tooltipFlag) {
+            builder.accept(Component.translatable("tooltip.champion-swords.champion_handle"));
+            super.appendHoverText(itemStack, context, display, builder, tooltipFlag);
+        }
+    });
 
     public static final List<ItemLike> CHAMPION_SWORDS_HANDLES = List.of(ECHOES_HANDLE, UNDYING_HANDLE, ELDER_HANDLE, TRIALS_HANDLE, HERO_HANDLE, ASHES_HANDLE, BLAZING_HANDLE, BRUTE_HANDLE, SOULS_HANDLE, INFERNO_HANDLE, CRYSTALS_HANDLE, EYE_HANDLE, SHULKER_HANDLE, DRAGON_HANDLE, VOID_HANDLE, CHAMPION_HANDLE);
 

@@ -1,0 +1,33 @@
+{
+  "parent": "champion-swords:get_diamond_sword",
+  "criteria": {
+    "got_eye_sword": {
+      "conditions": {
+        "items": [
+          {
+            "items": "champion-swords:eye_sword"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.champion-swords.get_eye_sword.description"
+    },
+    "frame": "goal",
+    "icon": {
+      "id": "champion-swords:eye_sword"
+    },
+    "title": {
+      "translate": "advancements.champion-swords.get_eye_sword.title"
+    }
+  },
+  "requirements": [
+    [
+      "got_eye_sword"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

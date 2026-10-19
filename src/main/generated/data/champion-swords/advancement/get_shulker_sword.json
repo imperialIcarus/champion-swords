@@ -1,0 +1,33 @@
+{
+  "parent": "champion-swords:get_diamond_sword",
+  "criteria": {
+    "got_shulker_sword": {
+      "conditions": {
+        "items": [
+          {
+            "items": "champion-swords:shulker_sword"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.champion-swords.get_shulker_sword.description"
+    },
+    "frame": "goal",
+    "icon": {
+      "id": "champion-swords:shulker_sword"
+    },
+    "title": {
+      "translate": "advancements.champion-swords.get_shulker_sword.title"
+    }
+  },
+  "requirements": [
+    [
+      "got_shulker_sword"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

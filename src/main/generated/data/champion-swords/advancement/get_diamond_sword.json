@@ -1,0 +1,32 @@
+{
+  "criteria": {
+    "got_diamond_sword": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:diamond_sword"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:gui/advancements/backgrounds/adventure",
+    "description": {
+      "translate": "advancements.champion-swords.get_diamond_sword.description"
+    },
+    "icon": {
+      "id": "minecraft:diamond_sword"
+    },
+    "title": {
+      "translate": "advancements.champion-swords.get_diamond_sword.title"
+    }
+  },
+  "requirements": [
+    [
+      "got_diamond_sword"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

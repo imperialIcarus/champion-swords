@@ -1,0 +1,33 @@
+{
+  "parent": "champion-swords:get_diamond_sword",
+  "criteria": {
+    "got_ashes_sword": {
+      "conditions": {
+        "items": [
+          {
+            "items": "champion-swords:ashes_sword"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.champion-swords.get_ashes_sword.description"
+    },
+    "frame": "goal",
+    "icon": {
+      "id": "champion-swords:ashes_sword"
+    },
+    "title": {
+      "translate": "advancements.champion-swords.get_ashes_sword.title"
+    }
+  },
+  "requirements": [
+    [
+      "got_ashes_sword"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

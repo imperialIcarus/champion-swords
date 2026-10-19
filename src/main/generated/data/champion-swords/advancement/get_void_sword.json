@@ -1,0 +1,33 @@
+{
+  "parent": "champion-swords:get_diamond_sword",
+  "criteria": {
+    "got_void_sword": {
+      "conditions": {
+        "items": [
+          {
+            "items": "champion-swords:void_sword"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.champion-swords.get_void_sword.description"
+    },
+    "frame": "challenge",
+    "icon": {
+      "id": "champion-swords:void_sword"
+    },
+    "title": {
+      "translate": "advancements.champion-swords.get_void_sword.title"
+    }
+  },
+  "requirements": [
+    [
+      "got_void_sword"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

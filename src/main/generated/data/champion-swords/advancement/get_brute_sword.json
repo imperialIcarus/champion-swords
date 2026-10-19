@@ -1,0 +1,33 @@
+{
+  "parent": "champion-swords:get_diamond_sword",
+  "criteria": {
+    "got_brute_sword": {
+      "conditions": {
+        "items": [
+          {
+            "items": "champion-swords:brute_sword"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.champion-swords.get_brute_sword.description"
+    },
+    "frame": "goal",
+    "icon": {
+      "id": "champion-swords:brute_sword"
+    },
+    "title": {
+      "translate": "advancements.champion-swords.get_brute_sword.title"
+    }
+  },
+  "requirements": [
+    [
+      "got_brute_sword"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,33 @@
+{
+  "parent": "champion-swords:get_diamond_sword",
+  "criteria": {
+    "got_elder_sword": {
+      "conditions": {
+        "items": [
+          {
+            "items": "champion-swords:elder_sword"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.champion-swords.get_elder_sword.description"
+    },
+    "frame": "goal",
+    "icon": {
+      "id": "champion-swords:elder_sword"
+    },
+    "title": {
+      "translate": "advancements.champion-swords.get_elder_sword.title"
+    }
+  },
+  "requirements": [
+    [
+      "got_elder_sword"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
