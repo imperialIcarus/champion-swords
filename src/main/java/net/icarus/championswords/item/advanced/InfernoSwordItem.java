@@ -65,8 +65,9 @@ public class InfernoSwordItem extends AbstractCustomSwordItem {
                 }
             };
             timer.schedule(timerTask, 0, 150);
+            return InteractionResult.SUCCESS;
         }
-        return InteractionResult.SUCCESS;
+        return InteractionResult.FAIL;
     }
 
     @Override
