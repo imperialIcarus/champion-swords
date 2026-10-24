@@ -46,5 +46,5 @@ Feel free to use in modpacks!
 
 For bug-reports please see the [issue tracker](https://github.com/imperialIcarus/champion-swords/issues).
 
-This mod is only officially distributed through Curseforge(unavailable as of current), [Modrinth](https://modrinth.com/mod/champion-swords), and the [github repository](https://github.com/imperialIcarus/champion-swords).
+This mod is only officially distributed through [Curseforge](https://www.curseforge.com/minecraft/mc-mods/champion-swords), [Modrinth](https://modrinth.com/mod/champion-swords), and the [github repository](https://github.com/imperialIcarus/champion-swords).
 
