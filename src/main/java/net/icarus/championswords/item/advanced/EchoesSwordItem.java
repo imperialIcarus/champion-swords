@@ -40,12 +40,12 @@ public class EchoesSwordItem extends AbstractCustomSwordItem{
             Vec3 normalize = delta.normalize();
             int steps = Mth.floor(delta.length() + 10) + 10;
             Vec3 end = source.add(normalize.scale(steps));
-            for (int i = 1; i < steps; ++i) {
-                Vec3 particlePos = source.add(normalize.scale((double) i));
-                level.addParticle(ParticleTypes.SONIC_BOOM, false, false, particlePos.x, particlePos.y, particlePos.z, (double) 0.0F, (double) 0.0F, (double) 0.0F);
-            }
 
             if (level instanceof ServerLevel serverLevel) {
+                for (int i = 1; i < steps; ++i) {
+                    Vec3 particlePos = source.add(normalize.scale((double) i));
+                    serverLevel.sendParticles(ParticleTypes.SONIC_BOOM, particlePos.x, particlePos.y, particlePos.z, 1, (double)0.0f, (double) 0.0F, (double) 0.0F, (double) 0.0F);
+                }
                 AABB boundingBox = new AABB(source, end);
                 boundingBox.inflate(10);
                 List<Entity> hitEntities = serverLevel.getEntities(player, boundingBox);
