@@ -4,6 +4,8 @@
 
 Champion Swords is a vanilla-friendly open-source mod that adds 16 new swords with custom abilities to Minecraft!
 
+See on [YouTube](https://youtu.be/xlhhod11qaY)
+
 ## Features
 
 Champion Swords adds three new tiers of swords. 
