@@ -32,7 +32,7 @@ The handles of tier one swords can be obtained in many ways. These do a base of 
 Tier two handles are obtained by merging tier one handles of their respective dimension. These do a base of 12 damage.
 
 - **Sword of the Hero(Overworld)** - Grants Strength 2, Speed 2, and Hero of the Village 5
-- **Sword of the Inferno(Nether)** - Shoots a flurry of Fireballs and Wither Skulls 
+- **Sword of the Inferno(Nether)** - Shoots a concentrated beam of fire
 - **Sword of the Void(End)** - Pushes away and damages enemies near you drastically
 
 ### The Champion Sword
